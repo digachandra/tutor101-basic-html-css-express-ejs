@@ -63,7 +63,7 @@ app.use(expressLayouts)
 
 // Set starting routes
 app.use(express.static(path.join(__dirname, 'public')))
-app.use('/', require('/routes'))
+app.use('/', require('./routes'))
 
 // Set port
 app.listen(port)
