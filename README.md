@@ -15,7 +15,7 @@ npm install -S express body-parser
 npm install -S ejs express-ejs-layouts
 ```
 
-**Note** if you want to use github, don't forget to add **.gitignore**
+**Note** if you want to use Git, don't forget to add **.gitignore**
 
 ```
 touch .gitignore
