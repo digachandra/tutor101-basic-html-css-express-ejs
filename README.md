@@ -85,6 +85,8 @@ module.exports = router
 
 #### 5. Init views
 
+We can use [Bootstrap](http://getbootstrap.com/ "Bootstrap") as css framework, and [jQuery](https://jquery.com/ "jQuery") as javascript library
+
 Main layout (views/layout.ejs)
 
 ```
@@ -106,7 +108,8 @@ Main layout header (views/layout-header.ejs)
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Tutor 101</title>
+<title>Tutorial 101: Basic HTML CSS with Express JS & EJS</title>
+<link rel="shortcut icon" href="/image/favicon.png" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="/css/style.css">
 ```
@@ -116,7 +119,7 @@ Main layout footer (views/layout-footer.ejs)
 ```
 <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+<script src="/js/core.js"></script>
 ```
 
 Page home (views/pages/home.ejs)
