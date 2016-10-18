@@ -77,8 +77,10 @@ var express = require('express')
 var router = express.Router()
 
 router.get('/', function(req, res, next) {
-  res.render('home');
+  res.render('pages/home')
 })
+
+module.exports = router
 ```
 
 #### 5. Init views
@@ -86,31 +88,51 @@ router.get('/', function(req, res, next) {
 Main layout (views/layout.ejs)
 
 ```
-code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include layout-header.ejs %>
+</head>
+<body>
+  <%- content %>
+  <%- include layout-footer.ejs %>
+</body>
+</html>
 ```
 
 Main layout header (views/layout-header.ejs)
 
 ```
-code
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Tutor 101</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/style.css">
 ```
 
 Main layout footer (views/layout-footer.ejs)
 
 ```
-code
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 ```
 
 Page home (views/pages/home.ejs)
 
 ```
-code
+<%- contentFor('content') %>
+
+<h1>Home Page</h1>
 ```
 
 #### 6. Init css (public/css/style.css)
 
 ```
-code
+html{
+  background: #add8e6; // light blue
+}
 ```
 
 #### 7. Start the engine!
